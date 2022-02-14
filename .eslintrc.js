@@ -18,6 +18,7 @@ module.exports = {
         'react-native/no-raw-text': 'error',
         'react-native/no-single-element-style-arrays': 'warn',
         'react-native/no-inline-styles': 'error',
+        'react-hooks/exhaustive-deps': 'off',
       },
     },
   ],

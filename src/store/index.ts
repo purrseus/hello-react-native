@@ -8,14 +8,14 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import * as rootReducer from './slices';
+import * as reducer from './slices';
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from './sagas';
 
 const sagaMiddleware = createSagaMiddleware();
 
 const store = configureStore({
-  reducer: rootReducer,
+  reducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       immutableCheck: true,

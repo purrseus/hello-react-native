@@ -17,3 +17,6 @@ export const createPersistReducer = <S>(
 
   return persistReducer(persistConfig, reducer);
 };
+
+export const generateRandomColor = () =>
+  `#${Math.random().toString(16).slice(-6)}`;

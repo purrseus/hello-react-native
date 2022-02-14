@@ -6,7 +6,7 @@ const initialState: CommonState = {
   loading: false,
 };
 
-const commonSlice = createSlice({
+const common = createSlice({
   name: 'common',
   initialState,
   reducers: {
@@ -19,8 +19,5 @@ const commonSlice = createSlice({
   },
 });
 
-export const commonActions = commonSlice.actions;
-export default createPersistReducer(
-  { key: commonSlice.name },
-  commonSlice.reducer,
-);
+export const commonActions = common.actions;
+export default createPersistReducer({ key: common.name }, common.reducer);
